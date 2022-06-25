@@ -1,12 +1,13 @@
 @use "./var";
-@use "./mixins";
+@import "./mixins";
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
+p,
+a {
 	padding: 0;
 	margin: 0;
 	color: var.$text;
@@ -39,32 +40,33 @@ p {
 	}
 }
 h1 {
-	font-family: var.$font-title;
-	font-size: 3.5rem;
-	font-weight: 800;
+	@include text(var.$font-title, 3.5rem, 800);
+	// font-family: var.$font-title !important;
+	// font-size: 3.5rem !important;
+	// font-weight: 800 !important;
 }
 h2 {
-	font-family: var.$font-title;
-	font-size: 2.75rem;
-	font-weight: 700;
+	font-family: var.$font-title !important;
+	font-size: 2.75rem !important;
+	font-weight: 700 !important;
 }
 h3 {
-	font-family: var.$font-title;
-	font-size: 2.25rem;
-	font-weight: 600;
+	font-family: var.$font-title !important;
+	font-size: 2.25rem !important;
+	font-weight: 700 !important;
 }
 h4 {
-	font-family: var.$font-title;
-	font-size: 2rem;
-	font-weight: 500;
+	font-family: var.$font-title !important;
+	font-size: 2rem !important;
+	font-weight: 600 !important;
 }
 h5 {
-	font-family: var.$font-title;
-	font-size: 1.75rem;
-	font-weight: 500;
+	font-family: var.$font-title !important;
+	font-size: 1.75rem !important;
+	font-weight: 500 !important;
 }
 h6 {
-	font-family: var.$font-title;
-	font-size: 1.5rem;
-	font-weight: 500;
+	font-family: var.$font-title !important;
+	font-size: 1.5rem !important;
+	font-weight: 500 !important;
 }

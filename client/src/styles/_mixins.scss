@@ -1,8 +1,8 @@
-// @mixin text($family, $size, $weight) {
-// 	font-family: $family !important;
-// 	font-size: $size !important;
-// 	font-weight: $size !important;
-// }
+@mixin text($family, $size, $weight) {
+	font-family: $family !important;
+	font-size: $size !important;
+	font-weight: $weight !important;
+}
 @mixin row($justify, $align, $wrap) {
 	display: flex;
 	flex-direction: row;

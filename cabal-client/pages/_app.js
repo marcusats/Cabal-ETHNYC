@@ -1,6 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import "../styles/index.scss";
-import chakraTheme from "../styles/chakraTheme";
+import "../../client/src/styles/index.scss";
+import chakraTheme from "../../client/src/styles/chakraTheme";
 import { useRouter } from "next/router";
 function Root({ Component, pageProps }) {
 	const router = useRouter();
