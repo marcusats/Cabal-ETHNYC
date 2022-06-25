@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Cabal
 pragma solidity ^0.8.0;
 
 contract Oath {
@@ -21,7 +22,7 @@ contract Oath {
     }
 
     function checkConnection(address user_wallet, address data_type_address)
-        public
+        public view
         returns (bool)
     {
         return (connections[user_wallet][msg.sender][data_type_address]);
