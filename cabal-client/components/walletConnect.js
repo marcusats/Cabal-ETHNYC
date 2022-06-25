@@ -9,13 +9,24 @@ export default function WalletConnectButton({ text }) {
 	const [walletId, setWalletId] = useState("");
 	const [chainId, setChainId] = useState(0);
 	async function handleConnect() {
-		const walletConnector = new WalletConnect({
-			bridge: "https://bridge.walletconnect.org", // Required
-			qrcodeModal: WalletConnectQRCodeModal,
-		});
-
+		console.log("top");
+		const walletConnector = new WalletConnect(
+			{
+				bridge: "https://bridge.walletconnect.org", // Required
+			},
+			{
+				clientMeta: {
+					description: "WalletConnect NodeJS Client",
+					url: "https://nodejs.org/en/",
+					icons: ["https://nodejs.org/static/images/logo.svg"],
+					name: "WalletConnect",
+				},
+			}
+		);
+		console.log("1");
 		// Check if connection is already established
 		if (!walletConnector.connected) {
+			console.log("2");
 			// create new session
 			walletConnector.createSession().then(() => {
 				// get uri for QR Code modal
@@ -30,9 +41,11 @@ export default function WalletConnectButton({ text }) {
 				);
 			});
 		}
+		console.log("3");
 
 		// Subscribe to connection events
 		walletConnector.on("connect", (error, payload) => {
+			console.log("4");
 			if (error) {
 				throw error;
 			}
@@ -41,18 +54,19 @@ export default function WalletConnectButton({ text }) {
 			WalletConnectQRCodeModal.close(
 				true // isNode = true
 			);
+
+			// Get provided accounts and chainId
+			const { accounts, chainId } = payload.params[0];
 			setWalletId(accounts[chainId]); //I think this is how this works, will have to test with two wallets
 			console.log({ walletId });
 			if (chainId === accounts.length) {
 				//this is the first time they're here
 				router.push("/signup");
 			}
-
-			// Get provided accounts and chainId
-			const { accounts, chainId } = payload.params[0];
 		});
 
 		walletConnector.on("session_update", (error, payload) => {
+			console.log("now here");
 			if (error) {
 				throw error;
 			}
@@ -69,14 +83,13 @@ export default function WalletConnectButton({ text }) {
 
 			// Delete walletConnector
 		});
-		console.log("here");
 	}
 
 	return (
 		<Button
 			onClick={async () => {
-				router.push("/signup");
-				// await handleConnect();
+				// router.push("/signup");
+				await handleConnect();
 			}}>
 			{text}
 		</Button>
