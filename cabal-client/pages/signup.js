@@ -17,21 +17,21 @@ export default function SignUp({}) {
 		{
 			title: "Encrypt",
 			description:
-				"All data on the Cabal network is encrypted and stored on IPFS ",
+				"All data on the Cabal network is encrypted and stored off chain for maximum security & privacy. ",
 			imgSrc: Step1,
 			alt: "step 1",
 		},
 		{
 			title: "Grant",
 			description:
-				"Sign into services by granting access to specific data fields",
+				"Services and Contracts won't be able to access any of your data without your permission",
 			imgSrc: Step2,
 			alt: "step 2",
 		},
 		{
 			title: "Revoke",
 			description:
-				"Revoking access prevents third parties from every accessing your data again",
+				"Ultimately, your data is your. Revoking access prevents services and contracts from every accessing your data again",
 			imgSrc: Step3,
 			alt: "step 3",
 		},
@@ -57,8 +57,13 @@ export default function SignUp({}) {
 			<section className="welcome">
 				<div className="content">
 					<div class="text">
-						<h2 className="fadeIn">Welcome</h2>
+						<h2 className="fadeIn">Welcome!</h2>
 						<h4>Let's Get You Set Up</h4>
+						<a href="#why-we-built">
+							<Button size={"lg"} isFullWidth>
+								Continue
+							</Button>
+						</a>
 					</div>
 					<div class="img-container">
 						<Image
@@ -71,22 +76,40 @@ export default function SignUp({}) {
 						/>
 					</div>
 				</div>
-
-				<div className="footer center">
-					<div className="footer-content">
-						<a href="#how-it-works">
-							<Button size={"lg"} isFullWidth>
-								Let's Get Started
-							</Button>
-						</a>
-					</div>
-				</div>
 			</section>
-			<section className="steps" id="how-it-works">
+			<section className="steps" id="why-we-built">
+				<div class="header">
+					<h1 className="subtle">Why We Built Cabal</h1>
+				</div>
 				<div class="content">
 					<div class="text">
 						<h2>Your Data Is Yours</h2>
 						<h6>Control Who Accesses It</h6>
+					</div>
+					<div class="img-container">
+						<Image
+							name={"Security"}
+							src={Security}
+							width="250px"
+							height="230px"
+							alt="Security"
+						/>
+					</div>
+				</div>
+				<div class="footer">
+					<a href="#how-it-works">
+						<Button size="lg" isFullWidth>
+							How It Works
+						</Button>
+					</a>
+				</div>
+			</section>
+			<section className="steps" id="how-it-works">
+				<div class="header">
+					<h1 class="subtle">How It Works</h1>
+				</div>
+				<div class="content">
+					<div class="text">
 						<div class="steps">
 							{steps.map((item) => {
 								return (
@@ -109,27 +132,15 @@ export default function SignUp({}) {
 							})}
 						</div>
 					</div>
-					<div class="img-container">
-						<Image
-							name={"Security"}
-							src={Security}
-							width="250px"
-							height="230px"
-							alt="Security"
-						/>
-					</div>
 				</div>
-				<div class="footer center">
-					<div className="footer-content">
-						<a href="#get-started">
-							<Button size="lg" isFullWidth>
-								Protect Your Data Today
-							</Button>
-						</a>
-					</div>
+				<div class="footer">
+					<a href="#get-started">
+						<Button size="lg" isFullWidth>
+							Get Started
+						</Button>
+					</a>
 				</div>
 			</section>
-
 			<section class="get-started" id="get-started">
 				<div class="header"></div>
 				<div class="content">
@@ -174,16 +185,6 @@ export default function SignUp({}) {
 							Set Up Later
 						</Button>
 					</div>
-				</div>
-			</section>
-			<section>
-				<div class="header"></div>
-				<div class="content">
-					<div class="text"></div>
-					<div class="img-container"></div>
-				</div>
-				<div class="footer center">
-					<div class="footer-content"></div>
 				</div>
 			</section>
 		</div>

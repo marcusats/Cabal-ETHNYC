@@ -1,0 +1,20 @@
+@use "./var";
+
+.manage-access {
+}
+.Title {
+  margin-top: 6rem;
+  padding-left: 8rem;
+}
+.services-container {
+  padding: 0 8rem;
+  width: 100%;
+}
+
+.inlineRow {
+  width: 100%;
+  @include row(space-between, center, nowrap);
+}
+.inlineChild {
+  flex-grow: 2;
+}
