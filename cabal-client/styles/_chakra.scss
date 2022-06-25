@@ -68,6 +68,16 @@
 
 	// @include standard-shadow();
 	background-color: var.$fg !important;
+	color: var.$text;
+	.chakra-modal__body {
+		color: var.$text;
+	}
+	.chakra-modal__close-btn {
+		color: var.$text-secondary;
+		&:hover {
+			color: var.$text;
+		}
+	}
 }
 .popover-arrow {
 	background: var.$fg !important;
