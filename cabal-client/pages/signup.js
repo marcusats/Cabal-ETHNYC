@@ -7,6 +7,8 @@ import Step1 from "../assets/signup/number-one.png";
 import Step2 from "../assets/signup/number-2.png";
 import Step3 from "../assets/signup/number-3.png";
 import WorldIDLogo from "../assets/sponsors/worldcoin.png";
+import NameIcon from "../assets/signup/name.png";
+import EmailIcon from "../assets/signup/email.png";
 import { useRouter } from "next/router";
 export default function SignUp({}) {
 	const router = useRouter();
@@ -37,13 +39,20 @@ export default function SignUp({}) {
 		},
 	];
 	const connections = [
-		// {
-		// 	title: "World ID",
-		// 	description: "Add PPPoPP to your cabal identity",
-		// 	imgSrc: WorldIDLogo,
-		// 	imgAlt: "world Id logo",
-		// 	url: "/data/addWorldIDLogo",
-		// },
+		{
+			title: "Name",
+			description: "Who Are You?",
+			imgSrc: NameIcon,
+			imgAlt: "person icon",
+			url: "/data/addName",
+		},
+		{
+			title: "Email",
+			description: "Add one or multiple emails",
+			imgSrc: EmailIcon,
+			imgAlt: "email icon",
+			url: "/data/addEmail",
+		},
 		{
 			title: "World ID",
 			description: "Add PPPoPP to your cabal identity",
@@ -145,7 +154,7 @@ export default function SignUp({}) {
 				<div class="header"></div>
 				<div class="content">
 					<div class="text">
-						<h2>Add A little More About You</h2>
+						<h2>Connect To A Data Type Contract</h2>
 
 						<div class="connections">
 							{connections.map((item) => {

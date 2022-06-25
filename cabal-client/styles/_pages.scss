@@ -87,6 +87,8 @@
 		.content {
 			.text {
 				.connections {
+					width: 100%;
+					max-width: 80rem;
 					@include row(flex-start, center, wrap);
 
 					.connection {
@@ -96,7 +98,6 @@
 							margin: 0.5rem;
 						}
 						.text {
-							max-width: 10rem;
 							text-align: justify;
 						}
 					}
