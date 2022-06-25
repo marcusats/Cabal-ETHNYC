@@ -1,0 +1,82 @@
+pragma solidity ^0.8.0;
+
+contract Aoth {
+
+
+    address admin;
+    //      field     ---->  field id
+    mapping(string  => uint8) field_id;
+    //      address   --->  field id       ----->          CID
+    mapping(address => mapping(uint8  => string )) data_types;    
+    //  user address -->  service address ------>Connection
+    mapping(address => mapping(address => address )) connections;
+
+    // service address --> name
+        mapping(address  => string ) services;
+
+    constructor() public {
+        admin = msg.sender;
+    }
+    //user adds data values
+    //gets a key ["email"]
+    //gets a CID [encrypted email]
+    function addData(string memory key, string memory value) public {
+        uint8 fieldId = field_id[key];
+        data_types[msg.sender][fieldId]=value;
+    }
+
+     function deleteData(string memory key) public {
+        uint8 fieldId = field_id[key];
+        delete data_types[msg.sender][fieldId];
+    }
+
+    function createConnection(string memory app_name, address app_admin, string memory field) public{
+        address new_connection = address (new Connection(msg.sender, address(this), app_name,app_admin, field));
+        connections[msg.sender][app_admin]=new_connection;
+    }
+
+}
+
+contract Connection{
+    int256 public count; //the times the connection was called
+    address public parent; //the parent contract
+    address public owner; //owner of the data
+    address public app_admin; //the wallet accessing the data
+    string private user_secret; //signed message of 2 random numbers
+    string private app_secret; //signed message of 2 random numbers
+
+    constructor(address _owner, address _parent, string memory app_name, address _app_admin,  string memory field) public  {
+        owner = _owner;
+        parent = _parent;
+        app_name = app_name;
+        app_admin=_app_admin;
+        field=field;
+        count=0;
+    }
+
+    modifier onlyParent() {
+        require(msg.sender == parent); // If it is incorrect here, it reverts.
+        _;                              // Otherwise, it continues.
+    } 
+
+    modifier onlyOwner() {
+        require(msg.sender == owner); // If it is incorrect here, it reverts.
+        _;                              // Otherwise, it continues.
+    } 
+
+    modifier onlyAppAdmin() {
+        require(msg.sender == app_admin); // If it is incorrect here, it reverts.
+        _;                              // Otherwise, it continues.
+    } 
+
+    function revoke() public onlyOwner {
+
+    }
+
+    function getData() public onlyAppAdmin{
+        count++;
+
+    }
+
+ 
+}
