@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@emotion/core": "^10.3.1",
+    "@emotion/styled": "^10.3.0",
+    "@uiball/loaders": "^1.2.6",
+    "emotion-theming": "^10.3.0",
     "next": "12.1.6",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.53.0"
   },
   "devDependencies": {
     "eslint": "8.18.0",
