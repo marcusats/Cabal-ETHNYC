@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import {
-	Button,
-	ButtonGroup,
-	FormControl,
-	FormLabel,
-	Input,
-} from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 import Image from "next/image";
 import Security from "../assets/signup/security.png";
 import Welcome from "../assets/signup/welcome.svg";
 import Step1 from "../assets/signup/number-one.png";
 import Step2 from "../assets/signup/number-2.png";
 import Step3 from "../assets/signup/number-3.png";
-import WorldID from "../assets/sponsors/worldcoin.png";
+import WorldIDLogo from "../assets/sponsors/worldcoin.png";
+import { useRouter } from "next/router";
 export default function SignUp({}) {
+	const router = useRouter();
 	const [data1, setData1] = useState(``);
 	const [arrowVisible, setArrowVisible] = useState(false);
 
@@ -41,11 +37,19 @@ export default function SignUp({}) {
 		},
 	];
 	const connections = [
+		// {
+		// 	title: "World ID",
+		// 	description: "Add PPPoPP to your cabal identity",
+		// 	imgSrc: WorldIDLogo,
+		// 	imgAlt: "world Id logo",
+		// 	url: "/data/addWorldIDLogo",
+		// },
 		{
 			title: "World ID",
 			description: "Add PPPoPP to your cabal identity",
-			imgSrc: WorldID,
+			imgSrc: WorldIDLogo,
 			imgAlt: "world Id logo",
+			url: "/data/addWorldIDLogo",
 		},
 	];
 	return (
@@ -135,15 +139,26 @@ export default function SignUp({}) {
 						<div class="connections">
 							{connections.map((item) => {
 								return (
-									<div class="connection">
-										<Image
-											name={"connection"}
-											src={item.imgSrc}
-											width="75px"
-											height="75px"
-											alt={item.alt}
-										/>
-									</div>
+									<button
+										class="connection"
+										onClick={() => {
+											router.push(item.url);
+										}}>
+										<h4>{item.title}</h4>
+										<div class="img-container">
+											<Image
+												name={"connection"}
+												src={item.imgSrc}
+												width="75px"
+												height="75px"
+												alt={item.alt}
+											/>
+										</div>
+
+										<div class="text">
+											<p>{item.description}</p>
+										</div>
+									</button>
 								);
 							})}
 						</div>
