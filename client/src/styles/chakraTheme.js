@@ -32,6 +32,9 @@ const components = {
 				backgroundColor: colors.accent,
 			}),
 		},
+		defaultProps: {
+			variant: "contained",
+		},
 	},
 };
 

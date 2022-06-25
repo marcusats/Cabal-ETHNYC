@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/logo.png";
 import { Button } from "@chakra-ui/react";
+import WalletConnect from "./walletConnect";
 export default function Header() {
 	return (
 		<header>
@@ -9,8 +10,9 @@ export default function Header() {
 				<img src={Logo} />
 				<h4>Cabal</h4>
 			</span>
-			<span class="links">
-				<Button variant="contained">Connect Wallet</Button>
+			<span className="links">
+				<WalletConnect text={"Connect Wallet"} />
+				{/* <Button variant="contained">Connect Wallet</Button> */}
 				{/* <Link to="/">
 					<h6>Home</h6>
 				</Link>
