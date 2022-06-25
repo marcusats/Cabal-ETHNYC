@@ -1,0 +1,70 @@
+@use "./var";
+@use "./mixins";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	padding: 0;
+	margin: 0;
+	color: var.$text;
+	&.secondary {
+		color: var.$text-secondary;
+	}
+	&.link {
+		color: var.$link;
+	}
+	&.link:hover {
+		text-decoration: underline;
+		button {
+			text-decoration: underline;
+		}
+	}
+	&.center {
+		text-align: center;
+	}
+	&.left {
+		text-align: left;
+	}
+	&.right {
+		text-align: right;
+	}
+	&.primary {
+		color: var.$primary;
+	}
+	&.no-wrap {
+		white-space: nowrap;
+	}
+}
+h1 {
+	font-family: var.$font-title;
+	font-size: 3.5rem;
+	font-weight: 800;
+}
+h2 {
+	font-family: var.$font-title;
+	font-size: 2.75rem;
+	font-weight: 700;
+}
+h3 {
+	font-family: var.$font-title;
+	font-size: 2.25rem;
+	font-weight: 600;
+}
+h4 {
+	font-family: var.$font-title;
+	font-size: 2rem;
+	font-weight: 500;
+}
+h5 {
+	font-family: var.$font-title;
+	font-size: 1.75rem;
+	font-weight: 500;
+}
+h6 {
+	font-family: var.$font-title;
+	font-size: 1.5rem;
+	font-weight: 500;
+}

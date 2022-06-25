@@ -1,13 +1,15 @@
-import { Button } from "@chakra-ui/core";
+import { Button } from "@chakra-ui/react";
+
 export default function Home() {
 	return (
 		<div className="page">
-			<button
+			<Button
+				variant="contained"
 				onClick={() => {
 					console.log("clicked");
 				}}>
 				Connect Wallet
-			</button>
+			</Button>
 		</div>
 	);
 }

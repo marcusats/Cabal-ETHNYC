@@ -1,3 +1,6 @@
+@use "./var";
+@use "./typography";
+
 html,
 body {
 	padding: 0;
@@ -13,4 +16,14 @@ a {
 
 * {
 	box-sizing: border-box;
+	font-size: 14px;
 }
+
+html {
+	height: 100vh;
+	max-height: 100vh;
+	width: 100vw;
+	position: fixed;
+}
+
+@import "./components/button";
