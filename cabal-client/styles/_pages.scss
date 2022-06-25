@@ -57,7 +57,7 @@
 			}
 		}
 	}
-	section {
+	section.steps {
 		.content {
 			.text {
 				width: 100%;
@@ -77,6 +77,27 @@
 					}
 					p {
 						max-width: 17rem;
+					}
+				}
+			}
+		}
+	}
+	section.get-started {
+		.content {
+			.text {
+				.connections {
+					@include row(flex-start, center, wrap);
+
+					.connection {
+						margin-right: auto;
+						@include column(flex-start, center, nowrap);
+						.img-container {
+							margin: 0.5rem;
+						}
+						.text {
+							max-width: 10rem;
+							text-align: justify;
+						}
 					}
 				}
 			}
