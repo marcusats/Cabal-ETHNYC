@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Logo from "../assets/img/logo.png";
 import { Button } from "@chakra-ui/react";
 import WalletConnect from "./walletConnect";

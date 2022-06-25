@@ -26,6 +26,7 @@ html {
 	width: 100vw;
 	position: fixed;
 	background-color: var.$bg;
+	scroll-behavior: smooth;
 }
 #app {
 	@include column(flex-start, center, nowrap);
@@ -35,12 +36,25 @@ html {
 	position: fixed;
 	background-color: var.$bg;
 }
+#header {
+	width: 100%;
+	height: 5rem;
+}
 #app-center {
-	height: 100%;
+	height: calc(100vh - 5rem);
 	width: 100%;
 	flex: 1;
 	padding: 1rem;
 }
+.page {
+	flex: 1;
+	height: 100%;
+	width: 100%;
+	color: var.$text;
+}
 
 @import "./components/button";
 @import "./components/header";
+@import "./chakra";
+
+@import "./pages/signup";

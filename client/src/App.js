@@ -1,11 +1,12 @@
 import React from "react";
 import Profile from "./pages/profile";
-import chakraTheme from "./styles/chakraTheme";
+import chakraTheme from "../../cabal-client/styles/chakraTheme";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import "./styles/index.scss";
+import "../../cabal-client/styles/index.scss";
+import Header from "../../cabal-client/components/header";
 import Home from "./pages/home";
-import Header from "./components/header";
+import SignUp from "./pages/signUp";
 
 function App() {
 	return (
@@ -16,7 +17,8 @@ function App() {
 					<div id="app-center">
 						<Routes>
 							<Route path="/" element={<Home />} />
-							<Route path="/profile" element={<Profile />} />
+							<Route path="/signup" element={<SignUp />} />
+							{/* <Route path="/profile" element={<Profile />} /> */}
 						</Routes>
 					</div>
 				</div>

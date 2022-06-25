@@ -1,13 +1,16 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import "../../client/src/styles/index.scss";
-import chakraTheme from "../../client/src/styles/chakraTheme";
-import { useRouter } from "next/router";
+import "../styles/index.scss";
+import chakraTheme from "../styles/chakraTheme";
+import Header from "../components/header";
 function Root({ Component, pageProps }) {
-	const router = useRouter();
-
 	return (
-		<div>
-			<Component {...pageProps} />
+		<div id="app">
+			<div id="header">
+				<Header />
+			</div>
+			<div id="app-center">
+				<Component {...pageProps} />
+			</div>
 		</div>
 	);
 }

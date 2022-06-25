@@ -1,17 +1,19 @@
-import { Button } from "@chakra-ui/react";
-import ConnectWallet from "../../client/src/components/connectWallet";
-
+import React from "react";
+import { Button, FormControl, Input } from "@chakra-ui/react";
 export default function Home() {
 	return (
-		<div className="page">
-			<Button
-				variant="contained"
-				onClick={() => {
-					console.log("clicked");
-				}}>
-				Connect Wallet
-			</Button>
-			<ConnectWallet />
+		<div>
+			<div className="content">
+				<h1>oAuth For The Open Internet</h1>
+				<h5>Authenticate Trustlessly</h5>
+				<FormControl>
+					<Input placeholder="hi" />
+				</FormControl>
+				<>
+					<Button>Start Developing</Button>
+					<Button variant={"outlined"}>Connect Wallet</Button>
+				</>
+			</div>
 		</div>
 	);
 }

@@ -50,10 +50,13 @@ const components = {
 		filled: {
 			backgroundColor: colors.foreground,
 		},
+		defaultProps: {
+			variant: "contained",
+		},
 	},
 
 	IconButton: {
-		variant: {
+		variants: {
 			text: {
 				backgroundColor: "transparent",
 			},
@@ -70,12 +73,23 @@ const components = {
 		backgroundColor: "red",
 	},
 	Input: {
-		baseStyle: {},
-		variants: {
-			filled: {
-				backgroundColor: colors.dark.card,
-			},
+		baseStyle: {
+			backgroundColor: colors.primary,
+			borderWidth: 5,
+			borderColor: colors.text,
+			borderStyle: "solid",
 		},
+		// variants: {
+		// 	filled: {},
+		// 	outline: {
+		// 		borderColor: colors.textSecondary,
+		// 		borderWidth: 1,
+		// 		borderStyle: "solid",
+		// 	},
+		// },
+		// defaultProps: {
+		// 	variant: "outline",
+		// },
 	},
 	Popover: {
 		variants: {
@@ -118,7 +132,7 @@ const components = {
 		variants: {
 			primary: {
 				dialog: {
-					backgroundColor: colors.dark.foreground,
+					backgroundColor: colors.foreground,
 				},
 			},
 		},
