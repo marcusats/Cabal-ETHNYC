@@ -2,7 +2,8 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import { ethers } from "ethers";
 import Web3 from "web3";
 import WalletConnectQRCodeModal from "@walletconnect/qrcode-modal";
-const INFURA_ID = "8f36546336664817bc3db0bd4240e3bc";
+const INFURA_ID =
+	"https://mainnet.infura.io/v3/8f36546336664817bc3db0bd4240e3bc";
 
 const provider = new WalletConnectProvider({
 	infuraId: INFURA_ID,
