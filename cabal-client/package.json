@@ -12,6 +12,7 @@
 		"@chakra-ui/react": "^2.2.1",
 		"@emotion/react": "^11.9.3",
 		"@emotion/styled": "^11.9.3",
+		"@rainbow-me/rainbowkit": "^0.3.4",
 		"@uiball/loaders": "^1.2.6",
 		"@walletconnect/client": "^1.7.8",
 		"@walletconnect/node": "^1.0.0",
@@ -25,6 +26,7 @@
 		"react-dom": "18.2.0",
 		"react-hot-toast": "^2.2.0",
 		"sass": "^1.53.0",
+		"wagmi": "^0.4.12",
 		"web3": "^1.7.4"
 	},
 	"devDependencies": {
