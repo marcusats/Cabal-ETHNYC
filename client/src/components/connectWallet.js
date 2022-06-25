@@ -5,6 +5,11 @@ import { useEffect, useState } from "react";
 
 export default function ConnectWallet() {
 	let web3Modal;
+	const connectWallet = async () => {
+		const instance = await web3Modal.connect();
+		const provider = new ethers.providers.Web3Provider(instance);
+		const signer = provider.getSigner();
+	};
 	useEffect(() => {
 		web3Modal = new Web3Modal({
 			network: "mainnet", // optional
@@ -21,10 +26,7 @@ export default function ConnectWallet() {
 		<div>
 			<button
 				onClick={async () => {
-					const instance = await web3Modal.connect();
-					const provider = new ethers.providers.Web3Provider(instance);
-					const signer = provider.getSigner();
-					console.log(signer);
+					await connectWallet();
 				}}>
 				Connect Wallet
 			</button>
