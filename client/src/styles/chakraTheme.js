@@ -122,6 +122,9 @@ const components = {
 				},
 			},
 		},
+		defaultProps: {
+			variant: "contained",
+		},
 	},
 };
 

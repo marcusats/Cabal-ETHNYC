@@ -1,18 +1,27 @@
-import "./styles/index.scss";
+import React from "react";
+import Profile from "./pages/profile";
 import chakraTheme from "./styles/chakraTheme";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Routes, Route, Outlet } from "react-router-dom";
-import Landing from "./pages/landing";
+import "./styles/index.scss";
+import Home from "./pages/home";
+import Header from "./components/header";
 
 function App() {
 	return (
-		<div className="App">
-			<ChakraProvider theme={chakraTheme}>
-				<Routes>
-					<Route path="/" element={<Landing />}></Route>
-				</Routes>
-			</ChakraProvider>
-		</div>
+		<ChakraProvider theme={chakraTheme}>
+			<BrowserRouter>
+				<div id="app">
+					<Header />
+					<div id="app-center">
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/profile" element={<Profile />} />
+						</Routes>
+					</div>
+				</div>
+			</BrowserRouter>
+		</ChakraProvider>
 	);
 }
 

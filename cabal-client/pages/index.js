@@ -1,5 +1,5 @@
 import { Button } from "@chakra-ui/react";
-import ConnectWallet from "../components/connectWallet";
+import ConnectWallet from "../../client/src/components/connectWallet";
 
 export default function Home() {
 	return (
