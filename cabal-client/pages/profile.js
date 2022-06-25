@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { Image } from "next/image";
-import ProfileInfoButton from "../../components/profileInfoButton";
-import ProfilePicture from "../../components/profilePicture";
-import { Context } from "../../providers/provider";
+import ProfileInfoButton from "../components/profileInfoButton";
+import ProfilePicture from "../components/profilePicture";
+import { Context } from "../providers/provider";
 
 export default function ProfilePage(params) {
 	const [name, setName] = useState("");

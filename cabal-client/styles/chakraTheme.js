@@ -34,9 +34,9 @@ const components = {
 			},
 		},
 		outlined: {
-			borderWidth: 1,
+			borderWidth: 3,
 			borderStyle: "solid",
-			borderColor: colors.secondaryText,
+			borderColor: colors.text,
 			color: colors.text,
 			_hover: { backgroundColor: colors.foreground },
 		},
