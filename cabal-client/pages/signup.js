@@ -8,7 +8,7 @@ export default function SignUp({}) {
 	return (
 		<div className="page sign-up ">
 			<section className="welcome">
-				<div class="header">
+				<div className="header">
 					<h2 className="fadeIn">Welcome</h2>
 					<h4>Let's Get You Set Up</h4>
 				</div>
@@ -18,8 +18,8 @@ export default function SignUp({}) {
 					</div>
 				</div>
 
-				<div class="footer center">
-					<div class="content">
+				<div className="footer center">
+					<div className="content">
 						<h6>You're Only 4 Steps Away From Online Anonymity</h6>
 						<a href="#question1">
 							<Button
@@ -36,7 +36,7 @@ export default function SignUp({}) {
 				</div>
 			</section>
 			<section className="question" id="question1">
-				<div class="content">
+				<div className="content">
 					<h6 for="data1">Label</h6>
 					<Input value={data1} onChange={(e) => setData1(e.target.value)} />
 				</div>

@@ -1,0 +1,69 @@
+@use "./var";
+.page {
+	// padding: 1rem 2rem;
+}
+.sign-up {
+	scroll-behavior: smooth !important;
+
+	overflow: auto;
+	height: 100%;
+	section {
+		padding: 1rem 2rem;
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		height: 100%;
+		.header {
+			grid-row: 1/2;
+		}
+		.content {
+			grid-row: 2/3;
+		}
+		.footer {
+			grid-row: 3/4;
+
+			&.center {
+				@include column(center, center, nowrap);
+			}
+			.content {
+				width: max-content;
+				.chakra-button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.sign-up {
+	.welcome {
+		.content {
+			.img-holder {
+				margin: auto 1rem;
+				float: right;
+				height: 10rem;
+				width: 30rem;
+				background-color: var.$primary-dark;
+			}
+		}
+	}
+	.question {
+		// background-color: pink;
+	}
+}
+
+.profile {
+	.header {
+		@include row(flex-start, center, nowrap);
+
+		.top,
+		.bottom {
+			@include row(flex-start, center, nowrap);
+			margin-left: 0.5rem;
+		}
+	}
+	.content {
+		padding: 2rem 0;
+		.buttons {
+			@include row(flex-start, center, wrap);
+		}
+	}
+}
