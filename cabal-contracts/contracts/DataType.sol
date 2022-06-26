@@ -22,7 +22,7 @@ contract DataType {
     constructor(string memory _name, address _oath_address) {
         name = _name;
         oath_instance = Oath(_oath_address);
-        oath_instance.ping();
+
     }
 
     function _addData(string memory savedData) public {
