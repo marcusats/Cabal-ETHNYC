@@ -16,7 +16,10 @@ button {
 	border-radius: 0.25rem;
 	width: 100%;
 	padding: 0.5rem;
-	@include column(flex-start, flex-start, nowrap);
+	@include row(flex-start, center, nowrap);
+	.status {
+		margin-right: 1ch;
+	}
 	&.odd {
 		background-color: var.$fg;
 	}

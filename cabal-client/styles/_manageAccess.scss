@@ -3,18 +3,19 @@
 .manage-access {
 }
 .Title {
-  margin-top: 6rem;
-  padding-left: 8rem;
+	margin-top: 6rem;
 }
 .services-container {
-  padding: 0 8rem;
-  width: 100%;
+	width: 100%;
 }
 
 .inlineRow {
-  width: 100%;
-  @include row(space-between, center, nowrap);
+	width: 100%;
+	@include row(space-between, center, nowrap);
 }
 .inlineChild {
-  flex-grow: 2;
+	flex-grow: 2;
+}
+.data-type {
+	@include row(space-between, center, nowrap);
 }

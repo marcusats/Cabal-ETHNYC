@@ -20,11 +20,8 @@ export default function Header() {
 			</a>
 			{connected && (
 				<>
-					<Button variant="text" onClick={() => router.push("/profile")}>
-						Profile
-					</Button>
-					<Button variant="text" onClick={() => router.push("/manageAccess")}>
-						Manage Access
+					<Button variant="text" onClick={() => router.push("/dashboard")}>
+						Dashboard
 					</Button>
 				</>
 			)}
