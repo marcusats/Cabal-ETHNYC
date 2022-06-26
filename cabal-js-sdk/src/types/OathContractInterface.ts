@@ -1,3 +1,5 @@
-export default interface OathContractInterface {
-  getData: Function;
+export interface OathContractInterface {
+  createConnection: Function;
+  revokeConnection: Function;
+  checkConnection: Function;
 }
