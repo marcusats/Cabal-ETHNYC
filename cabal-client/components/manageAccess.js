@@ -7,10 +7,10 @@ import {
 	AccordionButton,
 	AccordionPanel,
 	AccordionIcon,
-	Switch,
 } from "@chakra-ui/react";
+import ManageDataTypeAccessCard from "./manageDataTypeAccessCard";
 
-export default function ProfilePage(params) {
+export default function ManageAccess({}) {
 	const [name, setName] = useState("");
 	const { walletId } = useContext(Context);
 
@@ -22,10 +22,12 @@ export default function ProfilePage(params) {
 				{
 					dataTypeAddress: "0x2345",
 					dataTypeName: "Name",
+					allowAccess: false,
 				},
 				{
 					dataTypeAddress: "0x2345",
 					dataTypeName: "Birthday",
+					allowAccess: false,
 				},
 			],
 		},
@@ -37,41 +39,45 @@ export default function ProfilePage(params) {
 			<div className="services-container">
 				{newServices.map((item) => {
 					return (
-						<Accordion allowToggle>
-							<AccordionItem>
-								<AccordionButton>
-									<h6>{item.serviceName}</h6>
-									<AccordionIcon />
-								</AccordionButton>
-								<AccordionPanel>
-									<span>
-										<Button
-											size="sm"
-											onClick={() => {
-												router.push(`/manageAccess/${item.id}`);
-											}}>
-											More Details
-										</Button>
-										<Button size="sm" variant="danger">
-											Revoke All To All
-										</Button>
-									</span>
-									<div class="data-type">
-										<p>Data Type</p>
-										<p>Allow Access?</p>
-									</div>
+						<>
+							hi
+							<Accordion allowToggle>
+								<AccordionItem>
+									<AccordionButton>
+										<h5>{item.serviceName}</h5>
+										<AccordionIcon />
+									</AccordionButton>
+									<AccordionPanel>
+										<span className="row-end">
+											<Button
+												size="sm"
+												onClick={() => {
+													router.push(`/manageAccess/${item.id}`);
+												}}>
+												More Details
+											</Button>
+											<Button size="sm" variant="danger">
+												Revoke All To All
+											</Button>
+										</span>
+										<div class="data-type">
+											<h6>Data Type</h6>
+											<h6>Allow Access?</h6>
+										</div>
 
-									{item.allowedDataTypes.map((item) => {
-										return (
-											<div className="data-type">
-												{item.dataTypeName}
-												<Switch isChecked={item.allowAccess} />
-											</div>
-										);
-									})}
-								</AccordionPanel>
-							</AccordionItem>
-						</Accordion>
+										{item.allowedDataTypes.map((dataType, idx) => {
+											return (
+												<ManageDataTypeAccessCard
+													item={dataType}
+													idx={idx}
+													service={item.serviceName}
+												/>
+											);
+										})}
+									</AccordionPanel>
+								</AccordionItem>
+							</Accordion>
+						</>
 					);
 				})}
 			</div>

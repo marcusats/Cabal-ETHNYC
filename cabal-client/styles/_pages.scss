@@ -159,6 +159,29 @@
 		}
 	}
 }
+.manage-access {
+}
+.Title {
+	margin-top: 6rem;
+}
+.services-container {
+	width: 100%;
+}
+
+.inlineRow {
+	width: 100%;
+	@include row(space-between, center, nowrap);
+}
+.inlineChild {
+	flex-grow: 2;
+}
+.data-type {
+	width: 100%;
+	@include row(space-between, center, nowrap);
+	&.odd {
+		background-color: var.$fg;
+	}
+}
 .add-data {
 	.header {
 	}

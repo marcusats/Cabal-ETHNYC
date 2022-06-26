@@ -3,7 +3,7 @@ import ProfileInfoButton from "../components/profileInfoButton";
 import ProfilePicture from "../components/profilePicture";
 import { Context } from "../providers/provider";
 
-import ManageAccess from "./manageAccess";
+import ManageAccess from "../components/manageAccess";
 
 export default function ProfilePage(params) {
 	const { walletId } = useContext(Context);
