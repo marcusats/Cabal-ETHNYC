@@ -19,11 +19,14 @@ contract DataTypeW is DataType {
         _addData(savedData);
     }
 
+
     function fetch(address user_wallet, string memory reason, address provider_address)
+
         public
         returns (string memory)
     {
         string memory a = _fetch(user_wallet, reason, address(this),provider_address);
         return a;
     }
+
 }

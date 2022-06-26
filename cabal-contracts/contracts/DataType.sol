@@ -22,6 +22,11 @@ contract DataType {
     constructor(string memory _name, address _oath_address) {
         name = _name;
         oath_instance = Oath(_oath_address);
+<<<<<<< HEAD
+=======
+
+        
+>>>>>>> 0f5333c172ef0706b16d287605278ae21f300e9d
     }
 
     function _addData(string memory savedData) public {

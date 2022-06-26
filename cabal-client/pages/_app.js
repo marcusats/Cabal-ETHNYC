@@ -13,8 +13,10 @@ import { publicProvider } from "wagmi/providers/public";
 import { ethers } from "ethers";
 import Root from "./root";
 
+
+
 const { chains, provider } = configureChains(
-	[chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum],
+	[chain.mainnet,chain.kovan, chain.optimismKovan, chain.polygonMumbai],
 	[alchemyProvider({ alchemyId: process.env.ALCHEMY_ID }), publicProvider()]
 );
 
