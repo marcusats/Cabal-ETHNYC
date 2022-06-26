@@ -22,7 +22,7 @@ contract DataType {
     constructor(string memory _name, address _oath_address) {
         name = _name;
         oath_instance = Oath(_oath_address);
-        oath_instance.ping();
+        
     }
 
     function _addData(string memory savedData) public {
@@ -32,13 +32,15 @@ contract DataType {
     function _fetch(
         address user_wallet,
         string memory reason,
-        address data_type_address
+        address data_type_address,
+        address provider_address
     ) public returns (string memory) {
         if (msg.sender == user_wallet) {
             return (users[user_wallet].savedData);
         } else {
+            Oath new_oath_instance = Oath(provider_address);
             require(
-                oath_instance.checkConnection(user_wallet, data_type_address),
+                new_oath_instance.checkConnection(user_wallet, data_type_address, msg.sender),
                 "No connection found"
             );
             Request storage request = users[user_wallet].services[msg.sender];
