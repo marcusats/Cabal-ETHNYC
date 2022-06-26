@@ -22,8 +22,11 @@ contract DataType {
     constructor(string memory _name, address _oath_address) {
         name = _name;
         oath_instance = Oath(_oath_address);
+<<<<<<< HEAD
+=======
 
         
+>>>>>>> 0f5333c172ef0706b16d287605278ae21f300e9d
     }
 
     function _addData(string memory savedData) public {
@@ -41,7 +44,11 @@ contract DataType {
         } else {
             Oath new_oath_instance = Oath(provider_address);
             require(
-                new_oath_instance.checkConnection(user_wallet, data_type_address, msg.sender),
+                new_oath_instance.checkConnection(
+                    user_wallet,
+                    data_type_address,
+                    msg.sender
+                ),
                 "No connection found"
             );
             Request storage request = users[user_wallet].services[msg.sender];
