@@ -12,7 +12,7 @@ contract DataTypeW is DataType {
         owner = msg.sender;
         oathInstance = Oath(oath_address);
     }
-    
+
     function addData(string memory savedData) {
 
         _addData(savedData);
@@ -21,5 +21,3 @@ contract DataTypeW is DataType {
     function fetch(address user_wallet, string memory reason){
         _fetch(user_wallet, reason, oathInstance)
     }
-
-}
