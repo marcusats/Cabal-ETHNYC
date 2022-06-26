@@ -11,9 +11,9 @@ export default function Header() {
 	const { connected } = useContext(Context);
 	return (
 		<header>
-			<button className="content" onClick={() => router.push("/")}>
+			<button className="logo" onClick={() => router.push("/")}>
 				<Image name={"Logo"} src={Logo} width="30px" height="30px" alt="Logo" />
-				<h4>Cabal</h4>
+				<h4>Cabal Protocol</h4>
 			</button>
 			<a href="https://adamfarid453.github.io/CabalDocs/">
 				<Button variant="text">Documentation</Button>
