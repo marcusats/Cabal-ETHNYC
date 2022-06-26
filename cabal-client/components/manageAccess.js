@@ -22,11 +22,37 @@ export default function ManageAccess({}) {
 				{
 					dataTypeAddress: "0x2345",
 					dataTypeName: "Name",
-					allowAccess: false,
+					allowAccess: true,
 				},
 				{
 					dataTypeAddress: "0x2345",
 					dataTypeName: "Birthday",
+					allowAccess: false,
+				},
+				{
+					dataTypeAddress: "0x2345",
+					dataTypeName: "SSN",
+					allowAccess: false,
+				},
+			],
+		},
+		{
+			serviceWalletId: "0x3456",
+			serviceName: "GitHub",
+			allowedDataTypes: [
+				{
+					dataTypeAddress: "0x2345",
+					dataTypeName: "Name",
+					allowAccess: true,
+				},
+				{
+					dataTypeAddress: "0x2345",
+					dataTypeName: "Birthday",
+					allowAccess: true,
+				},
+				{
+					dataTypeAddress: "0x2345",
+					dataTypeName: "SSN",
 					allowAccess: false,
 				},
 			],
@@ -35,12 +61,11 @@ export default function ManageAccess({}) {
 
 	return (
 		<div className="manage-access">
-			<h2 className="Title">Manage Access</h2>
+			<h4>Manage Access</h4>
 			<div className="services-container">
 				{newServices.map((item) => {
 					return (
 						<>
-							hi
 							<Accordion allowToggle>
 								<AccordionItem>
 									<AccordionButton>
@@ -60,7 +85,7 @@ export default function ManageAccess({}) {
 												Revoke All To All
 											</Button>
 										</span>
-										<div class="data-type">
+										<div class="data-type header">
 											<h6>Data Type</h6>
 											<h6>Allow Access?</h6>
 										</div>

@@ -4,14 +4,14 @@ header {
 	width: 100%;
 	color: var.$text;
 	padding: 0.5rem 1rem;
-	.content {
+	.logo {
 		img {
 			height: 2rem;
 		}
-		@include row(flex-start, flex-end, nowrap);
+		@include row(flex-start, baseline, nowrap);
+		margin-right: auto;
 	}
 	.connect {
-		margin-left: auto;
 		@include row(flex-end, center, nowrap);
 		a {
 			margin: 0.5rem;

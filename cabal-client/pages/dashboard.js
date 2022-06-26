@@ -12,29 +12,35 @@ export default function ProfilePage(params) {
 		{
 			title: "Name",
 			value: "Brendan",
-			visible: false,
+			dataTypeAddress: false,
 		},
 		{
 			title: "Email",
 			value: "bprobst1029@gmail.com",
-			visible: false,
+			dataTypeAddress: false,
 		},
+
 		{
 			title: "Birthday",
 			value: null,
-			visible: false,
+			dataTypeAddress: false,
+		},
+		{
+			title: "World ID",
+			value: null,
+			dataTypeAddress: false,
 		},
 		{
 			title: "SSN",
 			value: "123-45-6789",
-			visible: false,
+			dataTypeAddress: false,
 		},
 		{
 			title: "Address",
 			value: "1 Castle Point Terrace, Hoboken NJ 07030",
-			visible: false,
+			dataTypeAddress: false,
 		},
-		{ title: "Phone Number", value: "9-11", visible: false },
+		{ title: "Phone Number", value: "9-11", dataTypeAddress: false },
 	];
 
 	return (

@@ -10,9 +10,19 @@ import {
 	ModalCloseButton,
 	Tooltip,
 } from "@chakra-ui/react";
-
+import { useEffect } from "react";
+import { Spinner } from "@uiball/loaders";
+import LoadingWrapper from "../helper/loadingWrapper";
 export default function ProfileInfoButton({ item, idx }) {
 	const [visible, setVisible] = useState(false);
+	const [loading, setLoading] = useState(false);
+	const [completed, setCompleted] = useState(false);
+
+	useEffect(() => {
+		setLoading(true);
+		// todo: get status and data value
+		setLoading(false);
+	}, []);
 	return (
 		<>
 			<Tooltip
@@ -22,8 +32,9 @@ export default function ProfileInfoButton({ item, idx }) {
 				<button
 					onClick={() => setVisible(true)}
 					className={`profile-info-btn ${idx % 2 ? "" : "odd"}`}>
-					<span
-						class={`status ${item.value !== null ? "success" : "todo"}`}></span>
+					<LoadingWrapper loading={loading} type={"dot-spinner"} size={20}>
+						<span class={`status ${completed ? "success" : "todo"}`}></span>
+					</LoadingWrapper>
 					<p>{item.title}</p>
 				</button>
 			</Tooltip>

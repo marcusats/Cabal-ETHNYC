@@ -83,17 +83,11 @@ const components = {
 				backgroundColor: colors.foreground,
 			},
 		},
-		// variants: {
-		// 	filled: {},
-		// 	outline: {
-		// 		borderColor: colors.textSecondary,
-		// 		borderWidth: 1,
-		// 		borderStyle: "solid",
-		// 	},
-		// },
-		// defaultProps: {
-		// 	variant: "outline",
-		// },
+	},
+	Switch: {
+		baseStyle: {
+			backgroundColor: colors.primary,
+		},
 	},
 	Popover: {
 		variants: {

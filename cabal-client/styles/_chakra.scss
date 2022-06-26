@@ -25,6 +25,8 @@
 }
 .chakra-accordion {
 	.chakra-accordion__item {
+		margin: 0.25rem 0.5rem;
+		@include standard-shadow();
 		.chakra-accordion__button {
 			.row {
 				@include row(flex-start, center, nowrap);
@@ -105,4 +107,20 @@
 			border: solid 3px transparent;
 		}
 	}
+}
+.custom-switch {
+	&.checked {
+		.chakra-switch__track {
+			background-color: var.$primary;
+			color: var.$primary;
+		}
+	}
+	&.unchecked {
+		.chakra-switch__track {
+			background-color: var.$accent;
+			color: var.$accent;
+		}
+	}
+}
+.chakra-switch {
 }
