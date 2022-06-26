@@ -12,6 +12,7 @@ const colors = {
 	background: "#fcfcfc",
 	foreground: "#e9e9e9",
 	accent: "#ef4565",
+	success: "#29ab45",
 	danger: "#F66363",
 	link: "#0645ad",
 };
@@ -31,7 +32,11 @@ const components = {
 			},
 			danger: {
 				color: "white",
-				backgroundColor: colors.accent,
+				backgroundColor: colors.danger,
+			},
+			success: {
+				color: "white",
+				backgroundColor: colors.success,
 			},
 			outlined: {
 				borderWidth: 1,
