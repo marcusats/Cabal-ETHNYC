@@ -1,3 +1,4 @@
+// @ts-nocheck
 import CabalClient from "../index";
 
 export async function pushData(data: string) {

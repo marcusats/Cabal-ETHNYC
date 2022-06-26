@@ -1,3 +1,4 @@
+// @ts-nocheck
 import CabalClient from "../index";
 
 export function addData(savedData: string) {

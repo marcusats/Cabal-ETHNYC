@@ -6,8 +6,6 @@ import * as dataType from "./contracts/DataType";
 import * as IPFS from "./helpers/ipfsCall";
 import OathAbi from "./abi/Oath.json";
 import DataTypeAbi from "./abi/DataType.json";
-import DataTypeContractInterface from "./types/DataTypeContractInterface";
-import OathContractInterface from "./types/OathContractInterface";
 
 const auth =
   "Basic " +
@@ -19,42 +17,45 @@ export default class CabalClient {
   public APP_NAME: string;
   public oath: any;
   public dataType: any;
-  public static provider;
-  public static chainId;
-  public static user;
-  public static ipfs;
-  public static OathContract;
-  public static DataTypeContract;
+  public provider;
+  public chainId;
+  public user;
+  public ipfs;
+  public OathContract;
+  public DataTypeContract;
 
-  constructor() {
+  constructor(_provider) {
     this.oath = oath;
     this.dataType = dataType;
-    this.init();
+    this.provider = _provider;
+    this.init(_provider);
   }
 
-  async init() {
-    provider = new ethers.providers.Web3Provider(window.ethereum);
-    chainId = await provider.getNetwork().chainId;
-    user = CabalClient.provider.getSigner();
-    DataTypeContract = new ethers.Contract(
-      "0x8cF84867ba54bd078F678fb276BB1a103efce7d3",
-      DataTypeAbi,
-      CabalClient.user
-    );
-    OathContract = new ethers.Contract(
-      "0x19d877482185BA38B3eBB0DCAdf344A8AF4f9799",
-      OathAbi,
-      CabalClient.user
-    );
+  async init(_provider) {
+    if (_provider) {
+      this.provider = _provider;
+      this.chainId = await _provider.getNetwork().chainId;
+      this.user = CabalClient._provider.getSigner();
+      this.DataTypeContract = new ethers.Contract(
+        "0x8cF84867ba54bd078F678fb276BB1a103efce7d3",
+        DataTypeAbi,
+        CabalClient.user
+      );
+      this.OathContract = new ethers.Contract(
+        "0x19d877482185BA38B3eBB0DCAdf344A8AF4f9799",
+        OathAbi,
+        CabalClient.user
+      );
 
-    ipfs = create({
-      host: "ipfs.infura.io",
-      port: 5001,
-      protocol: "https",
-      headers: {
-        authorization: auth,
-      },
-    });
+      this.ipfs = create({
+        host: "ipfs.infura.io",
+        port: 5001,
+        protocol: "https",
+        headers: {
+          authorization: auth,
+        },
+      });
+    }
   }
 
   async put(data_type_address: string, data: string) {
