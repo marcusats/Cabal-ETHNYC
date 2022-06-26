@@ -16,11 +16,7 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     },
-    /*optimisticTestnet: {
-      provider: () => new HDWalletProvider(mnemonic, `https://kovan.optimism.io/`),
-      network_id: 69,
-      skipDryRun:true
-    },*/
+
   },
 
 

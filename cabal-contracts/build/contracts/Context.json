@@ -15,15 +15,26 @@
     "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
     "exportedSymbols": {
       "Context": [
+<<<<<<< HEAD
         710
       ]
     },
     "id": 711,
+=======
+        670
+      ]
+    },
+    "id": 671,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
+<<<<<<< HEAD
         "id": 690,
+=======
+        "id": 650,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         "literals": [
           "solidity",
           "^",
@@ -40,15 +51,25 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
+<<<<<<< HEAD
           "id": 691,
+=======
+          "id": 651,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
           "nodeType": "StructuredDocumentation",
           "src": "111:496:3",
           "text": " @dev Provides information about the current execution context, including the\n sender of the transaction and its data. While these are generally available\n via msg.sender and msg.data, they should not be accessed in such a direct\n manner, since when dealing with meta-transactions the account sending and\n paying for execution may not be the actual sender (as far as an application\n is concerned).\n This contract is only required for intermediate, library-like contracts."
         },
         "fullyImplemented": true,
+<<<<<<< HEAD
         "id": 710,
         "linearizedBaseContracts": [
           710
+=======
+        "id": 670,
+        "linearizedBaseContracts": [
+          670
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         ],
         "name": "Context",
         "nameLocation": "626:7:3",
@@ -56,14 +77,22 @@
         "nodes": [
           {
             "body": {
+<<<<<<< HEAD
               "id": 699,
+=======
+              "id": 659,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "Block",
               "src": "702:34:3",
               "statements": [
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
                       "id": 696,
+=======
+                      "id": 656,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -74,7 +103,11 @@
                         "typeString": "msg"
                       }
                     },
+<<<<<<< HEAD
                     "id": 697,
+=======
+                    "id": 657,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -87,14 +120,23 @@
                       "typeString": "address"
                     }
                   },
+<<<<<<< HEAD
                   "functionReturnParameters": 695,
                   "id": 698,
+=======
+                  "functionReturnParameters": 655,
+                  "id": 658,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "nodeType": "Return",
                   "src": "712:17:3"
                 }
               ]
             },
+<<<<<<< HEAD
             "id": 700,
+=======
+            "id": 660,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -102,23 +144,39 @@
             "nameLocation": "649:10:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< HEAD
               "id": 692,
+=======
+              "id": 652,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "659:2:3"
             },
             "returnParameters": {
+<<<<<<< HEAD
               "id": 695,
+=======
+              "id": 655,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
                   "id": 694,
+=======
+                  "id": 654,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
                   "scope": 700,
+=======
+                  "scope": 660,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "src": "693:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -127,7 +185,11 @@
                     "typeString": "address"
                   },
                   "typeName": {
+<<<<<<< HEAD
                     "id": 693,
+=======
+                    "id": 653,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "693:7:3",
@@ -142,7 +204,11 @@
               ],
               "src": "692:9:3"
             },
+<<<<<<< HEAD
             "scope": 710,
+=======
+            "scope": 670,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "src": "640:96:3",
             "stateMutability": "view",
             "virtual": true,
@@ -150,14 +216,22 @@
           },
           {
             "body": {
+<<<<<<< HEAD
               "id": 708,
+=======
+              "id": 668,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "Block",
               "src": "809:32:3",
               "statements": [
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
                       "id": 705,
+=======
+                      "id": 665,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -168,7 +242,11 @@
                         "typeString": "msg"
                       }
                     },
+<<<<<<< HEAD
                     "id": 706,
+=======
+                    "id": 666,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -181,14 +259,23 @@
                       "typeString": "bytes calldata"
                     }
                   },
+<<<<<<< HEAD
                   "functionReturnParameters": 704,
                   "id": 707,
+=======
+                  "functionReturnParameters": 664,
+                  "id": 667,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "nodeType": "Return",
                   "src": "819:15:3"
                 }
               ]
             },
+<<<<<<< HEAD
             "id": 709,
+=======
+            "id": 669,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -196,23 +283,39 @@
             "nameLocation": "751:8:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< HEAD
               "id": 701,
+=======
+              "id": 661,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "759:2:3"
             },
             "returnParameters": {
+<<<<<<< HEAD
               "id": 704,
+=======
+              "id": 664,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
                   "id": 703,
+=======
+                  "id": 663,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
                   "scope": 709,
+=======
+                  "scope": 669,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "src": "793:14:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -221,7 +324,11 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
+<<<<<<< HEAD
                     "id": 702,
+=======
+                    "id": 662,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "793:5:3",
@@ -235,14 +342,22 @@
               ],
               "src": "792:16:3"
             },
+<<<<<<< HEAD
             "scope": 710,
+=======
+            "scope": 670,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "src": "742:99:3",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
+<<<<<<< HEAD
         "scope": 711,
+=======
+        "scope": 671,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         "src": "608:235:3",
         "usedErrors": []
       }
@@ -253,15 +368,26 @@
     "absolutePath": "@openzeppelin/contracts/utils/Context.sol",
     "exportedSymbols": {
       "Context": [
+<<<<<<< HEAD
         710
       ]
     },
     "id": 711,
+=======
+        670
+      ]
+    },
+    "id": 671,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
+<<<<<<< HEAD
         "id": 690,
+=======
+        "id": 650,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         "literals": [
           "solidity",
           "^",
@@ -278,15 +404,25 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "documentation": {
+<<<<<<< HEAD
           "id": 691,
+=======
+          "id": 651,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
           "nodeType": "StructuredDocumentation",
           "src": "111:496:3",
           "text": " @dev Provides information about the current execution context, including the\n sender of the transaction and its data. While these are generally available\n via msg.sender and msg.data, they should not be accessed in such a direct\n manner, since when dealing with meta-transactions the account sending and\n paying for execution may not be the actual sender (as far as an application\n is concerned).\n This contract is only required for intermediate, library-like contracts."
         },
         "fullyImplemented": true,
+<<<<<<< HEAD
         "id": 710,
         "linearizedBaseContracts": [
           710
+=======
+        "id": 670,
+        "linearizedBaseContracts": [
+          670
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         ],
         "name": "Context",
         "nameLocation": "626:7:3",
@@ -294,14 +430,22 @@
         "nodes": [
           {
             "body": {
+<<<<<<< HEAD
               "id": 699,
+=======
+              "id": 659,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "Block",
               "src": "702:34:3",
               "statements": [
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
                       "id": 696,
+=======
+                      "id": 656,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -312,7 +456,11 @@
                         "typeString": "msg"
                       }
                     },
+<<<<<<< HEAD
                     "id": 697,
+=======
+                    "id": 657,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -325,14 +473,23 @@
                       "typeString": "address"
                     }
                   },
+<<<<<<< HEAD
                   "functionReturnParameters": 695,
                   "id": 698,
+=======
+                  "functionReturnParameters": 655,
+                  "id": 658,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "nodeType": "Return",
                   "src": "712:17:3"
                 }
               ]
             },
+<<<<<<< HEAD
             "id": 700,
+=======
+            "id": 660,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -340,23 +497,39 @@
             "nameLocation": "649:10:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< HEAD
               "id": 692,
+=======
+              "id": 652,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "659:2:3"
             },
             "returnParameters": {
+<<<<<<< HEAD
               "id": 695,
+=======
+              "id": 655,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
                   "id": 694,
+=======
+                  "id": 654,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
                   "scope": 700,
+=======
+                  "scope": 660,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "src": "693:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -365,7 +538,11 @@
                     "typeString": "address"
                   },
                   "typeName": {
+<<<<<<< HEAD
                     "id": 693,
+=======
+                    "id": 653,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "693:7:3",
@@ -380,7 +557,11 @@
               ],
               "src": "692:9:3"
             },
+<<<<<<< HEAD
             "scope": 710,
+=======
+            "scope": 670,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "src": "640:96:3",
             "stateMutability": "view",
             "virtual": true,
@@ -388,14 +569,22 @@
           },
           {
             "body": {
+<<<<<<< HEAD
               "id": 708,
+=======
+              "id": 668,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "Block",
               "src": "809:32:3",
               "statements": [
                 {
                   "expression": {
                     "expression": {
+<<<<<<< HEAD
                       "id": 705,
+=======
+                      "id": 665,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                       "name": "msg",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
@@ -406,7 +595,11 @@
                         "typeString": "msg"
                       }
                     },
+<<<<<<< HEAD
                     "id": 706,
+=======
+                    "id": 666,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -419,14 +612,23 @@
                       "typeString": "bytes calldata"
                     }
                   },
+<<<<<<< HEAD
                   "functionReturnParameters": 704,
                   "id": 707,
+=======
+                  "functionReturnParameters": 664,
+                  "id": 667,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "nodeType": "Return",
                   "src": "819:15:3"
                 }
               ]
             },
+<<<<<<< HEAD
             "id": 709,
+=======
+            "id": 669,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -434,23 +636,39 @@
             "nameLocation": "751:8:3",
             "nodeType": "FunctionDefinition",
             "parameters": {
+<<<<<<< HEAD
               "id": 701,
+=======
+              "id": 661,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "759:2:3"
             },
             "returnParameters": {
+<<<<<<< HEAD
               "id": 704,
+=======
+              "id": 664,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
+<<<<<<< HEAD
                   "id": 703,
+=======
+                  "id": 663,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
+<<<<<<< HEAD
                   "scope": 709,
+=======
+                  "scope": 669,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                   "src": "793:14:3",
                   "stateVariable": false,
                   "storageLocation": "calldata",
@@ -459,7 +677,11 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
+<<<<<<< HEAD
                     "id": 702,
+=======
+                    "id": 662,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "793:5:3",
@@ -473,14 +695,22 @@
               ],
               "src": "792:16:3"
             },
+<<<<<<< HEAD
             "scope": 710,
+=======
+            "scope": 670,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
             "src": "742:99:3",
             "stateMutability": "view",
             "virtual": true,
             "visibility": "internal"
           }
         ],
+<<<<<<< HEAD
         "scope": 711,
+=======
+        "scope": 671,
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
         "src": "608:235:3",
         "usedErrors": []
       }
@@ -492,8 +722,13 @@
     "version": "0.8.11+commit.d7f03943.Emscripten.clang"
   },
   "networks": {},
+<<<<<<< HEAD
   "schemaVersion": "3.4.5",
   "updatedAt": "2022-06-26T06:24:37.012Z",
+=======
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-06-26T06:33:20.734Z",
+>>>>>>> 5f46ef5acc170675de508c3b524c7995930a3ebd
   "devdoc": {
     "details": "Provides information about the current execution context, including the sender of the transaction and its data. While these are generally available via msg.sender and msg.data, they should not be accessed in such a direct manner, since when dealing with meta-transactions the account sending and paying for execution may not be the actual sender (as far as an application is concerned). This contract is only required for intermediate, library-like contracts.",
     "kind": "dev",
