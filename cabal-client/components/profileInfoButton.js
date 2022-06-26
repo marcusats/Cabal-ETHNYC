@@ -15,16 +15,29 @@ import { useEffect } from "react";
 import { Spinner } from "@uiball/loaders";
 import { Input, Button } from "@chakra-ui/react";
 import LoadingWrapper from "../helper/loadingWrapper";
+
+import Cabal from "../sdk";
+import { ethers } from "ethers";
 export default function ProfileInfoButton({ item, idx }) {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [n, setN] = useState(false);
   const [completed, setCompleted] = useState(false);
-
+  const [client, setClient] = useState(null);
   useEffect(() => {
     setLoading(true);
     // todo: get status and data value
+    let prov = new ethers.providers.Web3Provider(window.ethereum);
+    console.log(prov);
+    const c = new Cabal(prov);
+    setClient(c);
+    console.log(c);
     setLoading(false);
   }, []);
+
+  function save() {
+    client.put("0x8cF84867ba54bd078F678fb276BB1a103efce7d3", n);
+  }
   return (
     <>
       <Tooltip
@@ -58,8 +71,13 @@ export default function ProfileInfoButton({ item, idx }) {
                     placeholder={"Enter your " + item.title.toLowerCase()}
                     size="sm"
                     variant="outline"
+                    onChange={(e) => {
+                      setN(e.target.value);
+                    }}
                   />
-                  <Button size="sm">Save Changes</Button>
+                  <Button size="sm" onClick={save}>
+                    Save Changes
+                  </Button>
                 </div>
               )}
             </ModalBody>
