@@ -14,9 +14,11 @@ export default function NewDataTypeOption({ item }) {
 	return (
 		<div>
 			<Button
+				variant="text"
 				onClick={() => {
 					setVisible(true);
-				}}>
+				}}
+				leftIcon={item.icon}>
 				{item.text}
 			</Button>
 			<Modal isOpen={visible} size={"lg"} onClose={() => setVisible(false)}>

@@ -13,6 +13,11 @@ contract DataTypeW is DataType {
         owner = msg.sender;
         oath_address = _oath_address;
     }
+<<<<<<< HEAD
+=======
+
+    function addData(string memory savedData) {
+>>>>>>> 1ac3d8a4bcb0ed498dc887786a5cca4faec11581
 
     function addData(string memory savedData) public {
         _addData(savedData);
@@ -26,4 +31,7 @@ contract DataTypeW is DataType {
         console.log("adam", a);
         return a;
     }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 1ac3d8a4bcb0ed498dc887786a5cca4faec11581

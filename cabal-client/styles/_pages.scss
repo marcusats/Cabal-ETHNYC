@@ -144,6 +144,7 @@
 }
 
 .profile {
+	overflow: scroll;
 	.header {
 		@include row(flex-start, center, nowrap);
 
@@ -156,8 +157,41 @@
 	.content {
 		padding: 2rem 0;
 		.buttons {
-			@include row(flex-start, center, wrap);
 		}
+	}
+}
+.manage-access {
+}
+.Title {
+	margin-top: 6rem;
+}
+.services-container {
+	width: 100%;
+}
+
+.inlineRow {
+	width: 100%;
+	@include row(space-between, center, nowrap);
+}
+.inlineChild {
+	flex-grow: 2;
+}
+
+.data-type {
+	padding: 0.5rem;
+
+	@include row(space-between, center, nowrap);
+	&.header {
+		background-color: var.$primary-dark;
+		border-radius: 0.5rem 0.5rem 0 0;
+		h6 {
+			color: var.$bg !important;
+		}
+	}
+	width: 100%;
+	border-radius: 0.25rem;
+	&.odd {
+		background-color: var.$fg;
 	}
 }
 .add-data {
