@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: Cabal
 pragma solidity ^0.8.0;
 
+import "hardhat/console.sol";
+
 contract Oath {
     address admin;
     mapping(address => mapping(address => mapping(address => bool))) connections;
@@ -22,11 +24,14 @@ contract Oath {
     }
 
     function checkConnection(address user_wallet, address data_type_address)
-        public view
+        public
+        view
         returns (bool)
     {
         return (connections[user_wallet][msg.sender][data_type_address]);
     }
+
+    function ping() public view {
+        console.log("pong");
+    }
 }
-
-

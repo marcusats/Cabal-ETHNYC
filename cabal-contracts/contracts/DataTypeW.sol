@@ -1,25 +1,29 @@
 // SPDX-License-Identifier: Cabal
 pragma solidity ^0.8.0;
 
-import "./DataType";
+import "./DataType.sol";
 import "./Oath.sol";
+import "hardhat/console.sol";
 
 contract DataTypeW is DataType {
     address public owner;
-    Oath public oathInstance;
+    address public oath_address;
 
-    constructor( address oath_address) DataType("WorldCoin") {
+    constructor(address _oath_address) DataType("WorldCoin", _oath_address) {
         owner = msg.sender;
-        oathInstance = Oath(oath_address);
+        oath_address = _oath_address;
     }
-    
-    function addData(string memory savedData) {
 
+    function addData(string memory savedData) public {
         _addData(savedData);
     }
 
-    function fetch(address user_wallet, string memory reason){
-        _fetch(user_wallet, reason, oathInstance)
+    function fetch(address user_wallet, string memory reason)
+        public
+        returns (string memory)
+    {
+        string memory a = _fetch(user_wallet, reason, address(this));
+        console.log("adam", a);
+        return a;
     }
-
 }
