@@ -58,7 +58,7 @@ export default function SignUp({}) {
 			description: "Add PPPoPP to your cabal identity",
 			imgSrc: WorldIDLogo,
 			imgAlt: "world Id logo",
-			url: "/data/addWorldIDLogo",
+			url: "/data/addWorldId",
 		},
 	];
 	return (
@@ -162,7 +162,7 @@ export default function SignUp({}) {
 									<button
 										class="connection"
 										onClick={() => {
-											router.push(`/data/item.url`);
+											router.push(`/${item.url}`);
 										}}>
 										<h4>{item.title}</h4>
 										<div class="img-container">

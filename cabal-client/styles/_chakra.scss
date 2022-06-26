@@ -40,6 +40,7 @@
 }
 .chakra-popover {
 	background-color: var.$fg;
+	@include standard-shadow();
 	z-index: 9999999;
 }
 .tag-container {

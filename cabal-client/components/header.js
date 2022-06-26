@@ -2,9 +2,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useContext } from "react";
 import Logo from "../assets/img/logo.png";
-import WalletConnect from "./walletConnect";
 import { Button } from "@chakra-ui/react";
 import { Context } from "../providers/provider";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 export default function Header() {
 	const router = useRouter();
 	const { connected } = useContext(Context);
@@ -28,7 +29,7 @@ export default function Header() {
 				</>
 			)}
 			<span className="connect">
-				<WalletConnect text={"Connect Wallet"} />
+				<ConnectButton />
 			</span>
 		</header>
 	);

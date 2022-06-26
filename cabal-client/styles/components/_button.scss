@@ -13,11 +13,11 @@ button {
 }
 
 .profile-info-btn {
-	height: 10vh;
-	width: 20vw;
 	border-radius: 0.25rem;
-	margin: 0.5rem;
+	width: 100%;
 	padding: 0.5rem;
-	background-color: var.$fg;
 	@include column(flex-start, flex-start, nowrap);
+	&.odd {
+		background-color: var.$fg;
+	}
 }

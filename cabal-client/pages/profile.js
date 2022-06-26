@@ -4,11 +4,17 @@ import ProfileInfoButton from "../components/profileInfoButton";
 import ProfilePicture from "../components/profilePicture";
 import { Context } from "../providers/provider";
 import SelectNewDataType from "../components/selectNewDataType";
+import { Button } from "@chakra-ui/react";
 
 export default function ProfilePage(params) {
 	const [name, setName] = useState("");
 	const { walletId } = useContext(Context);
-
+	const services = [
+		{ name: "Facebook", id: "facebook" },
+		{ name: "Github", id: "github" },
+		{ name: "Quae", id: "quae" },
+		{ name: "Gypsy", id: "gypsy" },
+	];
 	let informationCards = [
 		{
 			title: "Name",
@@ -36,8 +42,6 @@ export default function ProfilePage(params) {
 			visible: false,
 		},
 		{ title: "Phone Number", info: "9-11", visible: false },
-		{ title: "", info: "", visible: false },
-		{ title: "", info: "", visible: false },
 	];
 
 	return (
@@ -55,10 +59,31 @@ export default function ProfilePage(params) {
 				</span>
 			</div>
 			<div class="content">
-				<SelectNewDataType />
 				<div class="buttons">
 					{informationCards.map((item, idx) => {
-						return <ProfileInfoButton item={item} key={item.title} />;
+						return <ProfileInfoButton item={item} key={item.title} idx={idx} />;
+					})}
+				</div>
+				<SelectNewDataType />
+			</div>
+			<div className="manage-access">
+				<h2 className="Title">Manage Access</h2>
+				<div className="services-container">
+					{services.map((item) => {
+						return (
+							<div className="inlineRow">
+								<h3>{item.name}</h3>
+								<span>
+									<Button
+										onClick={() => {
+											router.push(`/manageAccess/${item.id}`);
+										}}>
+										Details
+									</Button>
+									<Button variant="danger">Revoke</Button>
+								</span>
+							</div>
+						);
 					})}
 				</div>
 			</div>

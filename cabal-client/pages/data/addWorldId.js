@@ -8,8 +8,9 @@ export default function AddWorldId() {
 		{ ssr: false }
 	);
 	return (
-		<>
+		<div className="page">
+			<h2>Add World Id</h2>
 			<WorldIdComponent />
-		</>
+		</div>
 	);
 }

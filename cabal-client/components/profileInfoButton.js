@@ -10,12 +10,14 @@ import {
 	ModalCloseButton,
 } from "@chakra-ui/react";
 
-export default function ProfileInfoButton({ item }) {
+export default function ProfileInfoButton({ item, idx }) {
 	const [visible, setVisible] = useState(false);
 	return (
 		<>
-			<button onClick={() => setVisible(true)} className="profile-info-btn">
-				<h4>{item.title}</h4>
+			<button
+				onClick={() => setVisible(true)}
+				className={`profile-info-btn ${idx % 2 ? "odd" : ""}`}>
+				<h6>{item.title}</h6>
 			</button>
 
 			<Modal isOpen={visible} size={"lg"} onClose={() => setVisible(false)}>
