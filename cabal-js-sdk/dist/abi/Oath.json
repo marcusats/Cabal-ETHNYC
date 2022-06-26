@@ -1,0 +1,73 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "service_wallet",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "data_type_address",
+                "type": "address"
+            }
+        ],
+        "name": "createConnection",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "service_wallet",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "data_type_address",
+                "type": "address"
+            }
+        ],
+        "name": "revokeConnection",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "user_wallet",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "data_type_address",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "requester_address",
+                "type": "address"
+            }
+        ],
+        "name": "checkConnection",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "constant": true
+    }
+]

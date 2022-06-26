@@ -1,4 +1,4 @@
-import { CabalClient } from "../index";
+import CabalClient from "../index";
 
 export function createConnection(
   service_wallet: string,

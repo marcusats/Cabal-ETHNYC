@@ -5,20 +5,20 @@ import * as oath from "./contracts/Oath";
 import * as dataType from "./contracts/DataType";
 import * as IPFS from "./helpers/ipfsCall";
 import OathAbi from "./abi/Oath.json";
-import DataTypeAbi from "./abi/Oath.json";
+import DataTypeAbi from "./abi/DataType.json";
 import DataTypeContractInterface from "./types/DataTypeContractInterface";
 import OathContractInterface from "./types/OathContractInterface";
 
 const auth =
   "Basic " +
   Buffer.from(
-    process.env.PROJECT_ID + ":" + process.env.PROJECT_SECRET
+    "2B5wFKzhQzIlNTgS453z4anLxKK" + ":" + "d6b4055218cf1cb91b9a2bbd0bde5243"
   ).toString("base64");
 
-export class CabalClient {
+export default class CabalClient {
   public APP_NAME: string;
-  public oath: OathContractInterface;
-  public dataType: DataTypeContractInterface;
+  public oath: any;
+  public dataType: any;
   public static provider;
   public static chainId;
   public static user;
@@ -59,8 +59,8 @@ export class CabalClient {
 
   async put(data_type_address: string, data: string) {
     //encrypt
-    const CID = await IPFS.pushData(data);
-    await this.dataType.addData(CID);
+    const { cid } = await IPFS.pushData(data);
+    await this.dataType.addData(cid);
   }
 
   async get(
@@ -69,13 +69,13 @@ export class CabalClient {
     data_type_address: string,
     provider_address: string
   ) {
-    const CID = await this.dataType.fetch(
+    const { cid } = await this.dataType.fetch(
       user_wallet,
       reason,
       data_type_address,
       provider_address
     );
-    const res = await IPFS.getData(CID);
+    const res = await IPFS.getData(cid);
     //decrypt
   }
 

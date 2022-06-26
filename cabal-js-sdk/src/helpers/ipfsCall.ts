@@ -1,10 +1,10 @@
-import { CabalClient } from "../index";
+import CabalClient from "../index";
 
-export async function pushData(data) {
+export async function pushData(data: string) {
   return await CabalClient.ipfs.add(data);
 }
 
-export async function getData(cid) {
+export async function getData(cid: string) {
   let res;
   const b = CabalClient.ipfs.cat(cid);
   for await (const chunk of b) {

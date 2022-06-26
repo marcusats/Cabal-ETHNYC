@@ -1,4 +1,4 @@
-import { CabalClient } from "../index";
+import CabalClient from "../index";
 
 export function addData(savedData: string) {
   CabalClient.DataTypeContract._addData(savedData);

@@ -1,14 +1,15 @@
 {
   "name": "cabal-js-sdk",
-  "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.ts",
+  "version": "1.0.6",
+  "description": "https://adamfarid453.github.io/CabalDocs/#/",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "npx ts-node src/index.ts",
+    "build": "tsc --build",
     "start": "tsc && node dist/app.js",
     "lint": "eslint . --ext .ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "prepublish": "tsc"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,6 @@
   },
   "dependencies": {
     "ethers": "^5.6.9",
-    "ipfs-http-client": "^57.0.3"
+    "ipfs-http-client": "^55.0.0"
   }
 }
