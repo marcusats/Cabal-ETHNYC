@@ -1,29 +1,26 @@
 import React from "react";
-import Profile from "./pages/profile";
-import chakraTheme from "../../cabal-client/styles/chakraTheme";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import { ChakraProvider } from "@chakra-ui/react";
-import "../../cabal-client/styles/index.scss";
-import Header from "../../cabal-client/components/header";
+import "./App.css";
 import Home from "./pages/home";
 import SignUp from "./pages/signUp";
+import Profile from "./pages/profile";
 
 function App() {
 	return (
-		<ChakraProvider theme={chakraTheme}>
-			<BrowserRouter>
-				<div id="app">
-					<Header />
-					<div id="app-center">
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/signup" element={<SignUp />} />
-							{/* <Route path="/profile" element={<Profile />} /> */}
-						</Routes>
-					</div>
+		<BrowserRouter>
+			<div id="app">
+				<header>
+					<h4>Demo App</h4>
+				</header>
+				<div id="app-center">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/signup" element={<SignUp />} />
+						<Route path="/profile" element={<Profile />} />
+					</Routes>
 				</div>
-			</BrowserRouter>
-		</ChakraProvider>
+			</div>
+		</BrowserRouter>
 	);
 }
 
