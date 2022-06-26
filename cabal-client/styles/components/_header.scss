@@ -1,6 +1,6 @@
 @use "../var";
 header {
-	@include row(space-between, center, nowrap);
+	@include row(flex-start, center, nowrap);
 	width: 100%;
 	color: var.$text;
 	padding: 0.5rem 1rem;
@@ -8,9 +8,10 @@ header {
 		img {
 			height: 2rem;
 		}
-		@include row(flex-start, center, nowrap);
+		@include row(flex-start, flex-end, nowrap);
 	}
-	.links {
+	.connect {
+		margin-left: auto;
 		@include row(flex-end, center, nowrap);
 		a {
 			margin: 0.5rem;

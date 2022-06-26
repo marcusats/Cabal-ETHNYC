@@ -13,6 +13,7 @@ const colors = {
 	foreground: "#e9e9e9",
 	accent: "#ef4565",
 	danger: "#F66363",
+	link: "#0645ad",
 };
 const components = {
 	Button: {
@@ -32,24 +33,22 @@ const components = {
 				color: "white",
 				backgroundColor: colors.accent,
 			},
+			outlined: {
+				borderWidth: 1,
+				borderStyle: "solid",
+				borderColor: colors.text,
+				color: colors.text,
+				_hover: { backgroundColor: colors.foreground },
+			},
+			text: {
+				_hover: { backgroundColor: colors.foreground },
+			},
+			link: {
+				color: colors.link,
+				_hover: { backgroundColor: colors.foreground },
+			},
 		},
-		outlined: {
-			borderWidth: 3,
-			borderStyle: "solid",
-			borderColor: colors.text,
-			color: colors.text,
-			_hover: { backgroundColor: colors.foreground },
-		},
-		text: {
-			_hover: { backgroundColor: colors.foreground },
-		},
-		link: {
-			color: colors.link,
-			_hover: { backgroundColor: colors.foreground },
-		},
-		filled: {
-			backgroundColor: colors.foreground,
-		},
+
 		defaultProps: {
 			variant: "contained",
 		},
@@ -78,6 +77,11 @@ const components = {
 			borderWidth: 5,
 			borderColor: colors.text,
 			borderStyle: "solid",
+		},
+		variants: {
+			filled: {
+				backgroundColor: colors.foreground,
+			},
 		},
 		// variants: {
 		// 	filled: {},

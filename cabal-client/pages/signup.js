@@ -76,11 +76,11 @@ export default function SignUp({}) {
 					</div>
 					<div class="img-container">
 						<Image
-							name={"Security"}
+							name={"Welcome"}
 							src={Welcome}
-							width="350px"
-							height="300px"
-							alt="Security"
+							width="450px"
+							height="375px"
+							alt="welcome"
 							className="welcome-img"
 						/>
 					</div>
@@ -151,18 +151,18 @@ export default function SignUp({}) {
 				</div>
 			</section>
 			<section class="get-started" id="get-started">
-				<div class="header"></div>
+				<div class="header">
+					<h2>Connect To A Data Type Contract</h2>
+				</div>
 				<div class="content">
 					<div class="text">
-						<h2>Connect To A Data Type Contract</h2>
-
 						<div class="connections">
 							{connections.map((item) => {
 								return (
 									<button
 										class="connection"
 										onClick={() => {
-											router.push(item.url);
+											router.push(`/data/item.url`);
 										}}>
 										<h4>{item.title}</h4>
 										<div class="img-container">
