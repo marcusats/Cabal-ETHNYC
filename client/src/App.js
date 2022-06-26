@@ -1,26 +1,36 @@
-import React from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import React, { useState } from "react";
 import "./App.css";
-import Home from "./pages/home";
-import SignUp from "./pages/signUp";
-import Profile from "./pages/profile";
 
 function App() {
+	const [name, setName] = useState("");
+	const [connected, setConnected] = useState(false);
+	const [walletAddress, setWalletAddress] = useState("");
+	const [loading, setLoading] = useState(false);
 	return (
-		<BrowserRouter>
-			<div id="app">
-				<header>
-					<h4>Demo App</h4>
-				</header>
-				<div id="app-center">
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/signup" element={<SignUp />} />
-						<Route path="/profile" element={<Profile />} />
-					</Routes>
-				</div>
+		<div id="app">
+			<header>
+				<h4>Demo App</h4>
+			</header>
+			<div id="app-center">
+				{loading ? (
+					<div>
+						{!connected ? (
+							<div>
+								<h1>Welcome</h1>
+								<button onClick={() => {}}>Sign Up With Cabal</button>
+							</div>
+						) : (
+							<div>
+								<h1>Welcome {name}</h1>
+								<p>{walletAddress}</p>
+							</div>
+						)}
+					</div>
+				) : (
+					<p>one moment please</p>
+				)}
 			</div>
-		</BrowserRouter>
+		</div>
 	);
 }
 
