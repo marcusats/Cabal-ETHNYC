@@ -1,2 +1,6 @@
 const Oath = artifacts.require("../contracts/Oath.sol");
-const WorldCoin = artifacts.require("../contracts/WorldCoin.sol");
+const DataTypeW = artifacts.require("../contracts/DataTypeW.sol");
+
+module.exports = function(deployer) {
+    deployer.deploy(Oath);
+}
