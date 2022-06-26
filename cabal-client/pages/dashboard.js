@@ -8,7 +8,6 @@ import ManageAccess from "../components/manageAccess";
 export default function ProfilePage(params) {
   const { walletId } = useContext(Context);
 
-<<<<<<< HEAD
   let informationCards = [
     {
       title: "Name",
@@ -37,42 +36,6 @@ export default function ProfilePage(params) {
     },
     { title: "Phone Number", value: "9-11", visible: false },
   ];
-=======
-	let informationCards = [
-		{
-			title: "Name",
-			value: "Brendan",
-			dataTypeAddress: false,
-		},
-		{
-			title: "Email",
-			value: "bprobst1029@gmail.com",
-			dataTypeAddress: false,
-		},
-
-		{
-			title: "Birthday",
-			value: null,
-			dataTypeAddress: false,
-		},
-		{
-			title: "World ID",
-			value: null,
-			dataTypeAddress: false,
-		},
-		{
-			title: "SSN",
-			value: "123-45-6789",
-			dataTypeAddress: false,
-		},
-		{
-			title: "Address",
-			value: "1 Castle Point Terrace, Hoboken NJ 07030",
-			dataTypeAddress: false,
-		},
-		{ title: "Phone Number", value: "9-11", dataTypeAddress: false },
-	];
->>>>>>> 3887c8502244316df78e2f65be6d78e88686e6cb
 
   return (
     <div class="page profile">
