@@ -14,7 +14,9 @@ export default function Header() {
 				<Image name={"Logo"} src={Logo} width="30px" height="30px" alt="Logo" />
 				<h4>Cabal</h4>
 			</button>
-			<Button variant="text">Documentation</Button>
+			<a href="https://adamfarid453.github.io/CabalDocs/">
+				<Button variant="text">Documentation</Button>
+			</a>
 			{connected && (
 				<>
 					<Button variant="text" onClick={() => router.push("/profile")}>
