@@ -29,6 +29,7 @@ export default function WalletConnectButton() {
 				<Button
 					variant="outlined"
 					onClick={() => {
+						setConnected(false);
 						disconnect();
 					}}>
 					Disconnect

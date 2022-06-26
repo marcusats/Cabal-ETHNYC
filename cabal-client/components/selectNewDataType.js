@@ -2,8 +2,11 @@ import React from "react";
 import {
 	Button,
 	Popover,
+	PopoverArrow,
+	PopoverContent,
 	PopoverHeader,
 	PopoverTrigger,
+	Portal,
 	Select,
 } from "@chakra-ui/react";
 import NewDataTypeOption from "./newDataTypeOption";
