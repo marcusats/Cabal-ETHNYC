@@ -14,24 +14,7 @@ export default function ManageAccess() {
 				}}>
 				<p>go to "glah"</p>
 			</button> */}
-			<div className="services-container">
-				{services.map((item) => {
-					return (
-						<div className="inlineRow">
-							<h3>{item.name}</h3>
-							<span>
-								<Button
-									onClick={() => {
-										router.push(`/manageAccess/${item.id}`);
-									}}>
-									Details
-								</Button>
-								<Button variant="danger">Revoke</Button>
-							</span>
-						</div>
-					);
-				})}
-			</div>
+			<div className="services-container"></div>
 		</div>
 	);
 }
